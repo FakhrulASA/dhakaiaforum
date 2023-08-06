@@ -1,3 +1,4 @@
+import 'package:dhakaiaforum/ui/dashboard_screen.dart';
 import 'package:dhakaiaforum/util/util.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -32,7 +33,7 @@ class _MyAppState extends State<MyApp> {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(),
+      home: const DashboardScreen(),
     );
   }
 }

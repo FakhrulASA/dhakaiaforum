@@ -1,5 +1,9 @@
+import 'package:dhakaiaforum/ui/post_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:intl/intl.dart';
+
+import '../ui/dashboard_screen.dart';
 
 showToastMessage(String message){
   Fluttertoast.showToast(
@@ -42,4 +46,15 @@ showLoaderDialog(BuildContext context, String message) {
       return alert;
     },
   );
+}
+
+void navigateToPostScreen(BuildContext context) {
+  Navigator.of(context).push(MaterialPageRoute(builder: (context) => PostScreen()));
+}
+void navigateToDashboardScreen(BuildContext context) {
+  Navigator.of(context).push(MaterialPageRoute(builder: (context) => DashboardScreen()));
+}
+String getCurrentTimeAsString(){
+  DateTime now = DateTime.now();
+  return DateFormat('kk:mm:ss, d, MMM EEE').format(now);
 }
